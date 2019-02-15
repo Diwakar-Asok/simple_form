@@ -7,8 +7,9 @@ Simple Student Application form
 	Department: <%= f.text_field :department %><br/><br/>
 	<%= f.submit%>
 <%end%>
+
 <hr>
-Display all the details of students<br>
+Display all the details of students<br><br>
 <%if !@students.blank?%>
 	<%@students.each do |student|%>
 		<%=student.first_name%> <%=student.last_name%> <%=student.age%> <%=student.department%><br>
