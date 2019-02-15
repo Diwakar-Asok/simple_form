@@ -1,0 +1,16 @@
+Simple Student Application form
+<hr>
+<%= form_for @student do |f| %>
+	First Name : <%= f.text_field :first_name %><br/><br/>
+	Last Name : <%= f.text_field :last_name %><br/><br/>
+	Age:        <%= f.text_field :age %><br/><br/>
+	Department: <%= f.text_field :department %><br/><br/>
+	<%= f.submit%>
+<%end%>
+<hr>
+Display all the details of students<br>
+<%if !@students.blank?%>
+	<%@students.each do |student|%>
+		<%=student.first_name%> <%=student.last_name%> <%=student.age%> <%=student.department%><br>
+	<%end%>
+<%end%>
